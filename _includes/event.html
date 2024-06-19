@@ -1,0 +1,27 @@
+<div class="event">
+    <p style="white-space: nowrap;">
+        {{ include.date | date: "%-d" }}.
+        {% assign m = include.date | date: "%-m" %}
+        {% case m %}
+        {% when "1" %}Jan.
+        {% when "2" %}Febr.
+        {% when "3" %}März
+        {% when "4" %}April
+        {% when "5" %}Mai
+        {% when "6" %}Juni
+        {% when "7" %}Juli
+        {% when "8" %}Aug.
+        {% when "9" %}Sept.
+        {% when "10" %}Okt.
+        {% when "11" %}Nov.
+        {% when "12" %}Dez.
+        {% endcase %}
+        {{ include.date | date: "%y" }}<br>
+        {{ include.begin }} - {{ include.end }}<br>
+    </p>
+    <p style="text-align: right;">
+        <strong>{{ include.title }}</strong><br>
+        {{ include.location }}
+        <button onclick="downloadIcs('{{ include.title }}', '{{ include.description }}', '{{ include.location }}', '{{ include.date }}T{{ include.begin }}:00Z', '{{ include.date }}T{{ include.end }}:00Z');">Termin speichern</button>
+    </p>
+</div>

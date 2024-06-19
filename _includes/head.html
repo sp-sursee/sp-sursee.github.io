@@ -1,0 +1,21 @@
+<head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/assets/scripts/FileSaver.js"></script>
+    <script src="/assets/scripts/ics.js"></script>
+    <script>
+    function downloadIcs(subject, description, location, begin, end) {
+        var cal = ics();
+        cal.addEvent(subject, description, location, begin, end);
+        cal.download(subject);
+    }
+    </script>
+    <script>
+        function resizeIframe(obj) {
+          obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+</head>

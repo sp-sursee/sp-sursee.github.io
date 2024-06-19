@@ -1,0 +1,7 @@
+---
+layout: landingpage
+---
+
+{% for post in site.posts limit:10 %}
+    {% include post.html %}
+{% endfor %}
