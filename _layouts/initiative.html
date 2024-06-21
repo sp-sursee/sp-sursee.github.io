@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+    {% include head.html %}
+    <body>
+        <header>
+            {% include header-image.html %}
+            {% include header-logos.html %}
+        </header>
+        {% include nav.html %}
+        <main id="main">
+            <div id="content">
+                {{ content }}
+            </div>
+        </main>
+        {% include footer-initiative.html %}
+    </body>
+</html>

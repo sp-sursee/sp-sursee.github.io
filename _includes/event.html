@@ -1,6 +1,6 @@
-<div class="event">
-    <p style="white-space: nowrap;">
-        {{ include.date | date: "%-d" }}.
+<div class="event" date="{{ include.date | date: "%Y-%m-%d" }}T{{ include.end }}:00Z">
+    <p>
+        <span style="white-space: nowrap;">{{ include.date | date: "%-d" }}.
         {% assign m = include.date | date: "%-m" %}
         {% case m %}
         {% when "1" %}Jan.
@@ -16,12 +16,17 @@
         {% when "11" %}Nov.
         {% when "12" %}Dez.
         {% endcase %}
-        {{ include.date | date: "%y" }}<br>
-        {{ include.begin }} - {{ include.end }}<br>
+        {{ include.date | date: "%y" }}</span>{% if include.begin and include.end and include.location %}, <span style="white-space: nowrap;">{{ include.begin }} - {{ include.end }}</span><br>
+        <em>{{ include.location }}</em><br>
+        {% endif %}
     </p>
-    <p style="text-align: right;">
+    <p>
         <strong>{{ include.title }}</strong><br>
-        {{ include.location }}
-        <button onclick="downloadIcs('{{ include.title }}', '{{ include.description }}', '{{ include.location }}', '{{ include.date }}T{{ include.begin }}:00Z', '{{ include.date }}T{{ include.end }}:00Z');">Termin speichern</button>
+        {% if include.description %}
+        <span>{{ include.description }}</span><br>
+        {% endif %}
     </p>
+    {% if include.begin and include.end and include.location %}
+    <button onclick="downloadIcs('{{ include.title }}', '{{ include.description }}', '{{ include.location }}', '{{ include.date | date: "%Y-%m-%d" }}T{{ include.begin }}:00Z', '{{ include.date | date: "%Y-%m-%d" }}T{{ include.end }}:00Z');">Termin speichern</button>
+    {% endif %}
 </div>

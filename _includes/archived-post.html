@@ -1,7 +1,4 @@
-<div class="post" onclick="window.location.href = '{{ post.url }}'">
-    {% if post.image %}
-    <div class="background" style="background-image: url('{{ post.image }}');"></div>
-    {% endif %}
+<div class="post archived" onclick="window.location.href = '{{ post.url }}'">
     <div class="content">
         <p class="date">
             {{ post.date | date: "%-d" }}.
@@ -21,7 +18,7 @@
             {% when "12" %}Dez.
             {% endcase %}
             {{ post.date | date: "%y" }}</p>
-        <h2 class="title">{{ post.title }}</h2>
+        <h3 class="title">{{ post.title }}</h3>
         <p>{{ post.description }}</p>
         <a href="{{ post.url }}" class="button">Mehr lesen</a>
     </div>
