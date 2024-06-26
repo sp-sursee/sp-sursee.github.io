@@ -4,4 +4,31 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/assets/scripts/FileSaver.js"></script>
+    <script src="/assets/scripts/ics.js"></script>
+    <script>
+        function toUTC(date_string) {
+            let local_date = new Date(date_string);
+            let utc_date = new Date(local_date.getTime() + local_date.getTimezoneOffset() * 60000);
+            return utc_date;
+        }
+        function downloadIcs(subject, description, location, begin, end) {
+            console.log(subject, description, location, begin, end);
+            var cal = ics();
+            cal.addEvent(subject, description, location, toUTC(begin), toUTC(end));
+            console.log(cal.build());
+            cal.download(subject);
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            let elements = document.getElementsByClassName("event");
+            for (let i = 0; i < elements.length; i++) {
+                let element = elements[i];
+                let date_utc = toUTC(element.getAttribute("date"));
+                let now = new Date();
+                if (date_utc < now) {
+                    element.remove();
+                }
+            }
+        });
+    </script>
 </head>

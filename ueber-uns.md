@@ -71,7 +71,6 @@ name="Andrea Elmer"
 role="Präsidentin der Controlling-Kommission"
 %}
 
-
 {% include portrait.html
 image="/assets/images/portraits/hannes-lüthi.webp"
 name="Hannes Lüthi"

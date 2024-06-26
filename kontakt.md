@@ -6,9 +6,8 @@ layout: default
 
 ### Per Mail
 
-<a class="button" href="mailto:elija.st@bluewin.ch">Mail an Elija Stäuble</a>
-
-<a class="button" href="mailto:beni.rindlisbacher@bluewin.ch">Mail an Beni Rindlisbacher</a>
+<a href="mailto:elija.st@bluewin.ch">elija.st@bluewin.ch</a>
+<a href="mailto:beni.rindlisbacher@bluewin.ch">beni.rindlisbacher@bluewin.ch</a>
 
 ### Per Post
 

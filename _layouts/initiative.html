@@ -2,16 +2,42 @@
 <html lang="{{ site.lang }}">
     {% include head.html %}
     <body>
+        {% if page.logos and page.color %}
+        <style>
+            :root {
+                --primary-color: {{ page.color }};
+            }
+        </style>
+        {% endif %}
         <header>
             {% include header-image.html %}
-            {% include header-logos.html %}
+            {% if page.logos %}
+                {% include header-logos.html %}
+            {% else %}
+                {% include header-title.html %}
+            {% endif %}
         </header>
-        {% include nav.html %}
+        {% if page.logos %}
+            <nav>
+                <a href="#main">Mehr lesen</a>
+            </nav>
+        {% else %}
+            {% include nav.html %}
+        {% endif %}
         <main id="main">
-            <div id="content">
+            <div class="content">
+                <h2>{{ page.title }}</h2>
+                <p>{{ page.description }}</p>
                 {{ content }}
             </div>
         </main>
-        {% include footer-initiative.html %}
+        {% if page.logos %}
+            <footer>
+                <p>Dies ist eine Website der SP Sursee.</p>
+                <a href="/">Zurück zur Homepage</a><br>
+            </footer>
+        {% else %}
+            {% include footer.html %}
+        {% endif %}
     </body>
 </html>

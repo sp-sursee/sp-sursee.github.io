@@ -6,9 +6,11 @@
         <div class="background-static" style="background-image: url('/assets/sursee.jpg');"></div>
         <img class="background-animated" src="/assets/sursee.jpg">
     {% endif %}
-    {% if page.title %}
-        <span id="slogan">{{ page.title }}</span>
-    {% else %}
-        <span id="slogan">Ein Sursee für alle statt für wenige</span>
-    {% endif %}
+    <div class="content">
+        {% if page.title %}
+            <span id="slogan">{{ page.title }}</span>
+        {% else %}
+            <span id="slogan">Ein Sursee für alle<br>statt für wenige</span>
+        {% endif %}
+    </div>
 </div>

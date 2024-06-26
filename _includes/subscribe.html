@@ -1,0 +1,34 @@
+
+<form method="post" action="https://lists.251.hosttech.eu/mailman/subscribe/{{ include.id }}" id="subscribe">
+    <p><strong>Newsletter abonnieren</strong></p>
+    <div id="subscribe-content">
+        <p>
+            <label for="email">Deine E-Mail Adresse</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p>
+            <label for="fullname">Dein ganzer Name</label>
+            <input type="email" id="fullname" name="fullname">
+        </p>
+        <input type="hidden" id="pw" name="pw" value="">
+        <input type="hidden" id="pw-conf" name="pw-conf" value="">
+        <input type="hidden" id="digest" name="digest" value="0">
+        <input type="submit" id="submit" value="Abonnieren">
+    </div>
+</form>
+<script>
+function formSubmit(event) {
+  var url = "/post/url/here";
+  var request = new XMLHttpRequest();
+  request.open('POST', url, true);
+  request.onload = function() {
+    var content = document.getElementById("subscribe-content");
+    content.innerHTML = "<p>Sie haben sich erfolgreich angemeldet!</p>";
+  };
+  request.onerror = function() {
+  };
+  request.send(new FormData(event.target)); 
+  event.preventDefault();
+}
+document.getElementById("subscribe").addEventListener("submit", formSubmit);
+</script>

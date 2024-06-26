@@ -1,4 +1,9 @@
 <div id="header-title">
-    <img src="/assets/sp-logo-negative.png">
-    <h1 id="title">SP Sursee<br>und Umgebung</h1>
+    <div class="content">
+        <div id="header-title-inner" style="justify-content: center; gap: 16px;">
+            {% for logo in page.logos %}
+                <img src="{{ logo }}">
+            {% endfor %}
+        </div>
+    </div>
 </div>
