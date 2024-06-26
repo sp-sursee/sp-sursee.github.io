@@ -9,8 +9,6 @@ logos: ["/assets/sp-logo.png", "/assets/grüne-sursee.png", "/assets/glp-sursee.
 
 ### Ausgangslage
 
-<a class="button" href="/assets/documents/medienmitteilung-attraktive-altstadt.pdf">Medienmitteilung zur Ungültigkeitserklärung</a>
-
 ### Argumente
 
 <details>
