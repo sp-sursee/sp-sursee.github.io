@@ -2,7 +2,7 @@
     {% if post.image %}
     <div class="background" style="background-image: url('{{ post.image }}');"></div>
     {% endif %}
-    <div class="content">
+    <div class="post-content">
         <p class="date">
             {{ post.date | date: "%-d" }}.
             {% assign m = post.date | date: "%-m" %}
@@ -22,7 +22,7 @@
             {% endcase %}
             {{ post.date | date: "%y" }}</p>
         <h2 class="title">{{ post.title }}</h2>
-        <p>{{ post.description }}</p>
+        <p class="description">{{ post.description }}</p>
         <a href="{{ post.url }}" class="button">Mehr lesen</a>
     </div>
 </div>

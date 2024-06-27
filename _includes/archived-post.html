@@ -1,5 +1,5 @@
 <div class="post archived" onclick="window.location.href = '{{ post.url }}'">
-    <div class="content">
+    <div class="post-content">
         <p class="date">
             {{ post.date | date: "%-d" }}.
             {% assign m = post.date | date: "%-m" %}
@@ -19,7 +19,7 @@
             {% endcase %}
             {{ post.date | date: "%y" }}</p>
         <h3 class="title">{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
+        <p class="description">{{ post.description }}</p>
         <a href="{{ post.url }}" class="button">Mehr lesen</a>
     </div>
 </div>

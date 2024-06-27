@@ -35,12 +35,12 @@ header, nav, main, footer {
 }
 
 .post {
-    padding-top: var(--main-padding);
-    padding-bottom: var(--main-padding);
+    padding-top: 32px;
+    padding-bottom: 32px;
     position: relative;
 }
 
-.post .content {
+.post .post-content {
     position: relative;
 }
 
@@ -62,6 +62,7 @@ header, nav, main, footer {
     height: 100%;
     z-index: -1000;
     animation: slide 90s linear infinite alternate;
+    animation-delay: -45s;
 }
 
 .background-static {
@@ -142,6 +143,7 @@ nav {
     top: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 32px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -158,7 +160,7 @@ nav a, footer a {
 }
 
 nav > a {
-    padding: 4px;
+    /*padding: 4px;*/
     padding-left: 8px;
     padding-right: 8px;
     text-decoration: none;
@@ -191,6 +193,8 @@ h3 {
 
 summary {
     font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 main img {
@@ -255,7 +259,16 @@ iframe {
     border: none;
 }
 
-figure {
+figure.image {
+    margin: 0;
+    width: 100%;
+}
+
+figure.image figcaption {
+    font-style: italic;
+}
+
+figure.portrait {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -264,11 +277,11 @@ figure {
     margin-bottom: 1em;
 }
 
-figure > img {
+figure.portrait > img {
     width: 100%;
 }
 
-figcaption {
+figure.portrait figcaption {
     padding: 16px;
 }
 
@@ -289,11 +302,11 @@ figcaption {
         justify-content: center;
     }
 
-    figure {
+    figure.portrait {
         flex-wrap: nowrap;
     }
 
-    figure > img {
+    figure.portrait > img {
         width: 192px;
     }
 }

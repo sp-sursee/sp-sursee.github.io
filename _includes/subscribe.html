@@ -23,7 +23,7 @@ function formSubmit(event) {
   request.open('POST', url, true);
   request.onload = function() {
     var content = document.getElementById("subscribe-content");
-    content.innerHTML = "<p>Sie haben sich erfolgreich angemeldet!</p>";
+    content.innerHTML = "<p>Du hast dich erfolgreich angemeldet!</p>";
   };
   request.onerror = function() {
   };

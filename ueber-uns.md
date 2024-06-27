@@ -16,7 +16,7 @@ In all diesen Jahren hat sie sich in der politischen Arbeit immer von ihren sozi
 
 ### Geschäftsleitung
 
-Die Geschäftsleitung der SP Sursee ist gerne für Sie da und übernimmt die operative Führung sowie diverse Aufgaben des Tagesgeschäfts.
+Die Geschäftsleitung der SP Sursee ist gerne für dich da und übernimmt die operative Führung sowie diverse Aufgaben des Tagesgeschäfts.
 
 {% include portrait.html
 image="/assets/images/portraits/beni-rindlisbacher.webp"
