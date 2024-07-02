@@ -1,5 +1,5 @@
 
-<form method="post" action="" id="subscribe">
+<form method="post" action="https://lists.sp-sursee.ch/mailman/subscribe/{{ include.id }}" id="subscribe">
     <p><strong>Newsletter abonnieren</strong></p>
     <div id="subscribe-content">
         <p>
@@ -16,19 +16,3 @@
         <input type="submit" id="submit" value="Abonnieren">
     </div>
 </form>
-<script>
-function formSubmit(event) {
-  var url = "https://lists.sp-sursee.ch/mailman/subscribe/{{ include.id }}";
-  var request = new XMLHttpRequest();
-  request.open('POST', url, true);
-  request.onload = function() {
-    var content = document.getElementById("subscribe-content");
-    content.innerHTML = "<p>Du hast dich erfolgreich angemeldet!</p>";
-  };
-  request.onerror = function() {
-  };
-  request.send(new FormData(event.target)); 
-  event.preventDefault();
-}
-document.getElementById("subscribe").addEventListener("submit", formSubmit);
-</script>
