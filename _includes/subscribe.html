@@ -1,5 +1,5 @@
 
-<form method="post" action="https://lists.251.hosttech.eu/mailman/subscribe/{{ include.id }}" id="subscribe">
+<form method="post" action="" id="subscribe">
     <p><strong>Newsletter abonnieren</strong></p>
     <div id="subscribe-content">
         <p>
@@ -8,7 +8,7 @@
         </p>
         <p>
             <label for="fullname">Dein ganzer Name</label>
-            <input type="email" id="fullname" name="fullname">
+            <input type="text" id="fullname" name="fullname">
         </p>
         <input type="hidden" id="pw" name="pw" value="">
         <input type="hidden" id="pw-conf" name="pw-conf" value="">
@@ -18,7 +18,7 @@
 </form>
 <script>
 function formSubmit(event) {
-  var url = "/post/url/here";
+  var url = "https://lists.sp-sursee.ch/mailman/subscribe/{{ include.id }}";
   var request = new XMLHttpRequest();
   request.open('POST', url, true);
   request.onload = function() {

@@ -26,4 +26,4 @@ Politische Arbeit – auch wenn sie ehrenamtlich ist – kostet. Um spezielle Pr
 
 Als Sympathisant:in erhälst du automatisch alle Informationen über Termine, Aktivitäten der SP Sursee und Umgebung, Einladungen zu Parteiversammlungen und zu speziellen Anlässen sowie unsere Newsletter. Daraus entsteht Ihnen gegenüber der Partei keinerlei Verpflichtung, wir freuen uns aber, dich bei der einen oder anderen Gelegenheit in unserem Kreis begrüssen zu dürfen.
 
-{% include subscribe.html id="info" %}
+{% include subscribe.html id="sympis" %}
