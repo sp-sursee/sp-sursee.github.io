@@ -1,4 +1,4 @@
-<div class="post" onclick="window.location.href = '{{ post.url }}'">
+<div class="post" onclick="window.location.href = '{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}'">
     {% if post.image %}
     <div class="background" style="background-image: url('{{ post.image }}');"></div>
     {% endif %}
@@ -23,6 +23,10 @@
             {{ post.date | date: "%y" }}</p>
         <h2 class="title">{{ post.title }}</h2>
         <p class="description">{{ post.description }}</p>
+        {% if post.link %}
+        <a href="{{ post.link }}" class="button">Mehr lesen</a>
+        {% else %}
         <a href="{{ post.url }}" class="button">Mehr lesen</a>
+        {% endif %}
     </div>
 </div>
