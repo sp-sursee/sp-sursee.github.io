@@ -38,6 +38,8 @@ header, nav, main, footer {
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
+    margin-top: 64px;
+    margin-bottom: 64px;
 }
 
 .post .post-content {
