@@ -14,6 +14,10 @@ In all diesen Jahren hat sie sich in der politischen Arbeit immer von ihren sozi
 * für gesunde Finanzen
 * für mehr soziale Gerechtigkeit
 
+### Kontakt
+
+Generelle Anfragen beantworten wir gerne unter [info@sp-sursee.ch](mailto:info@sp-sursee.ch).
+
 ### Geschäftsleitung
 
 Die Geschäftsleitung der SP Sursee ist gerne für dich da und übernimmt die operative Führung sowie diverse Aufgaben des Tagesgeschäfts.
@@ -22,25 +26,28 @@ Die Geschäftsleitung der SP Sursee ist gerne für dich da und übernimmt die op
 image="/assets/images/portraits/beni-rindlisbacher.webp"
 name="Beni Rindlisbacher"
 role="Co-Präsident"
+email="beni.rindlisbacher@sp-sursee.ch"
 %}
-
 
 {% include portrait.html
 image="/assets/images/portraits/yvonne-zemp-baumgartner2.webp"
 name="Yvonne Zemp Baumgartner"
 role="Co-Präsidentin"
+email="yvonne.zemp@sp-sursee.ch"
 %}
 
 {% include portrait.html
 image="/assets/images/portraits/jan-paganini.webp"
 name="Jan Paganini"
 role="Finanzen"
+email="jan.paganini@sp-sursee.ch"
 %}
 
 {% include portrait.html
 image="/assets/images/portraits/elija-samuel-stäuble.webp"
 name="Elija Samuel Stäuble"
 role="Sekretariat"
+email="elija.staeuble@sp-sursee.ch"
 %}
 
 ### Unsere Mandate im Kantonsrat

@@ -6,8 +6,7 @@ layout: default
 
 ### Per Mail
 
-<a href="mailto:elija.st@bluewin.ch">elija.st@bluewin.ch</a>
-<a href="mailto:beni.rindlisbacher@bluewin.ch">beni.rindlisbacher@bluewin.ch</a>
+Generelle Anfragen beantworten wir gerne unter <a href="mailto:info@sp-sursee.ch">info@sp-sursee.ch</a>.
 
 ### Per Post
 

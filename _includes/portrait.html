@@ -4,5 +4,8 @@
         <strong>{{include.name}}</strong><br>
         <em>{{include.role}}</em><br>
         {{include.caption}}
+        {% if include.email %}
+            <a class="button" href="mailto:{{include.email}}">Mail</a>
+        {% endif %}
     </figcaption>
 </figure>
