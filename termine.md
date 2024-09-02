@@ -5,7 +5,7 @@ layout: default
     
 ## Termine
 
-{% include event.html title="SP Politbier mit Kijan Espahangizi" date="2024-9-10" begin="19:30" end="23:00" location="Craftwerk Sursee" description="Historiker Kijan Espahangizi, Geschäftsführer des Zentrums Geschichte des Wissens (ZGW) der ETH & Universität Zürich referiert über Migration und Integration." %}
+{% include event.html title="Politbier mit Kijan Espahangizi zu den Themen Migration, Integration und Bürgerrecht" date="2024-9-10" begin="19:30" end="21:00" location="Craftwerk Sursee" description="Wie gestalten wir Migration und Integration, ohne zu beschönigen oder zu dämonisieren? Mit dem renommierten Historiker und Migrationsforscher Kijan Espahangizi suchen wir einen pragmatischen Weg, der jenseits polarisierender Schlagzeilen liegt. Komm vorbei und diskutiere mit!" %}
 
 {% include event.html title="Kantonale und Nationale Abstimmungen" date="2024-9-22" %}
 

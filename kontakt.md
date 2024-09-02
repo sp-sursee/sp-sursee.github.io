@@ -6,7 +6,7 @@ layout: default
 
 ### Per Mail
 
-Generelle Anfragen beantworten wir gerne unter <a href="mailto:info@sp-sursee.ch">info@sp-sursee.ch</a>.
+Generelle Anfragen beantworten wir gerne unter [info@sp-sursee.ch](mailto:info@sp-sursee.ch).
 
 ### Per Post
 
