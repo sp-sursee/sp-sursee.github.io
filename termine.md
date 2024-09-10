@@ -9,7 +9,7 @@ layout: default
 
 {% include event.html title="Kantonale und Nationale Abstimmungen" date="2024-9-22" %}
 
-{% include event.html title="SP Themenabend voraussichtlich Thema Wasserqualität" date="2024-10-22" begin="19:30" end="23:00" location="Craftwerk Sursee" description="Gemeinsames Eintauchen und Diskutieren über die Themen (Trink-)Wasserqualität und Gewässerschutz." %}
+{% include event.html title="SP Themenabend zum Thema Wohnen" date="2024-10-22" begin="19:30" end="23:00" location="Craftwerk Sursee" description="Gemeinsames Eintauchen und Diskutieren über das Thema Wohnen." %}
 
 {% include event.html title="Kantonale und Nationale Abstimmungen" date="2024-11-24" %}
 
