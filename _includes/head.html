@@ -6,14 +6,54 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/print.css" media="print">
+    <script src="/assets/scripts/qrcode.min.js"></script>
     <script src="/assets/scripts/FileSaver.js"></script>
     <script src="/assets/scripts/ics.js"></script>
     <script>
+        function printPreview() {
+            let links = document.getElementsByTagName("a");
+            console.log(links.length);
+            for (let i = 0; i < links.length; i++) {
+                let link = links[i];
+                console.log(link);
+                let href = link.getAttribute("href");
+                if (!href.startsWith("http")) {
+                    href = window.location.origin + href;
+                }
+
+                let qrContainer = document.createElement("div");
+                qrContainer.classList.add("qr-container");
+                let qrCode = document.createElement("div");
+                qrCode.classList.add("qr-code");
+                let qrInfo = document.createElement("div");
+                qrInfo.classList.add("qr-info");
+
+                qrInfo.innerHTML = "Für weitere Infos, scannen Sie den QR-Code oder besuchen Sie <br><em>" + href + "</em>";
+
+                new QRCode(qrCode, {
+                    text: href,
+                    width: 1024,
+                    height: 1024
+                });
+
+                qrContainer.appendChild(qrInfo);
+                qrContainer.appendChild(qrCode);
+                link.before(qrContainer);
+            }
+
+            loadScript("https://unpkg.com/pagedjs/dist/paged.polyfill.js", () => {
+                setTimeout(() => {
+                    window.print();
+                }, 1000);
+            });
+        }
         function toUTC(date_string) {
             let local_date = new Date(date_string);
             let utc_date = new Date(local_date.getTime() + local_date.getTimezoneOffset() * 60000);
             return utc_date;
         }
+
         function downloadIcs(subject, description, location, begin, end) {
             console.log(subject, description, location, begin, end);
             var cal = ics();
@@ -21,6 +61,7 @@
             console.log(cal.build());
             cal.download(subject);
         }
+
         document.addEventListener("DOMContentLoaded", function() {
             let elements = document.getElementsByClassName("event");
             for (let i = 0; i < elements.length; i++) {
@@ -32,5 +73,15 @@
                 }
             }
         });
+
+        function loadScript(url, callback) {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            script.onreadystatechange = callback;
+            script.onload = callback;
+            head.appendChild(script);
+        }
     </script>
 </head>

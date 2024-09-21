@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+@page {
+    size: A4;
+    margin: 2cm;
+
+    @bottom-right {
+        content: "Seite " counter(page) " / " counter(pages);
+    }
+
+    @bottom-left {
+        content: "Soorsi Poscht";
+    }
+}
+
+body {
+    background: white;
+}
+
+#header-image, nav, footer, .background, button, a.button {
+    display: none;
+}
+
+main {
+    padding: 0;
+    column-count: 2;
+    -webkit-column-count: 2;
+    column-rule: 1px solid lightgrey;
+    column-gap: 1cm;
+}
+
+.post {
+    margin: 0;
+    padding: 0;
+}
+
+.post .date, .post .title {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+
+.post .description {
+    page-break-before: avoid;
+    page-break-after: avoid;
+}
+
+.post + .post {
+    border-top: 1px solid lightgrey;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#header-title img {
+    filter: invert(100%);
+}
+
+header, #header-title {
+    min-height: auto;
+    height: auto;
+    padding: 0;
+}
+
+header {
+    margin-bottom: 1cm;
+}
+
+#header-title {
+    background: none;
+    color: black;
+    position: static;
+}
+
+#title::after {
+    content: "Soorsi Poscht";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 48px;
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.qr-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5cm;
+    height: 96px;
+    page-break-inside: avoid;
+    page-break-before: avoid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.qr-code {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.qr-info {
+    font-size: 12px;
+}
