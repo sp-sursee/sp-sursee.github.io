@@ -331,3 +331,11 @@ input {
     border: none;
 }
 
+canvas {
+    display: none;
+}
+
+footer button {
+    background: white;
+    color: black;
+}
