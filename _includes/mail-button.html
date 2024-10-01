@@ -1,0 +1,2 @@
+{% assign reversed = include.email | split: "" | reverse | join: "" %}
+<a class="button" href="mailto:{{reversed}}" onclick="let mail = this.href.substr(7).split('').reverse().join(''); this.href = 'mailto:' + mail; this.innerText = mail; this.onclick = '' ">Mail</a>

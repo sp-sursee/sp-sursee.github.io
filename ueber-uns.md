@@ -16,7 +16,9 @@ In all diesen Jahren hat sie sich in der politischen Arbeit immer von ihren sozi
 
 ### Kontakt
 
-Generelle Anfragen beantworten wir gerne unter [info@sp-sursee.ch](mailto:info@sp-sursee.ch).
+Generelle Anfragen beantworten wir gerne per Mail.
+
+{% include mail-button.html email="info@sp-sursee.ch" %}
 
 ### Geschäftsleitung
 

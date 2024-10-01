@@ -5,7 +5,7 @@
         <em>{{include.role}}</em><br>
         {{include.caption}}
         {% if include.email %}
-            <a class="button" href="mailto:{{include.email}}">Mail</a>
+            {% include mail-button.html email=include.email %}
         {% endif %}
     </figcaption>
 </figure>
