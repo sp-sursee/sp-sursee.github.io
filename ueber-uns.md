@@ -25,17 +25,31 @@ Generelle Anfragen beantworten wir gerne per Mail.
 Die Geschäftsleitung der SP Sursee ist gerne für dich da und übernimmt die operative Führung sowie diverse Aufgaben des Tagesgeschäfts.
 
 {% include portrait.html
-image="/assets/images/portraits/beni-rindlisbacher.webp"
-name="Beni Rindlisbacher"
-role="Co-Präsident"
-email="beni.rindlisbacher@sp-sursee.ch"
+image="/assets/images/portraits/fabian-boesiger.jpg"
+name="Fabian Bösiger"
+role="Präsident ad interim"
+email="fabian.boesiger@sp-sursee.ch"
 %}
 
 {% include portrait.html
 image="/assets/images/portraits/yvonne-zemp-baumgartner2.webp"
 name="Yvonne Zemp Baumgartner"
-role="Co-Präsidentin"
+role="Mitglied GL"
 email="yvonne.zemp@sp-sursee.ch"
+%}
+
+{% include portrait.html
+image="/assets/images/portraits/beni-rindlisbacher.webp"
+name="Beni Rindlisbacher"
+role="Mitglied GL"
+email="beni.rindlisbacher@sp-sursee.ch"
+%}
+
+{% include portrait.html
+image="/assets/images/portraits/andrea-elmer.webp"
+name="Andrea Elmer"
+role="Mitglied GL"
+email="andrea.elmer@sp-sursee.ch"
 %}
 
 {% include portrait.html
@@ -51,6 +65,8 @@ name="Elija Samuel Stäuble"
 role="Sekretariat"
 email="elija.staeuble@sp-sursee.ch"
 %}
+
+
 
 ### Unsere Mandate im Kantonsrat
 

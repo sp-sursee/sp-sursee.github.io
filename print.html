@@ -1,0 +1,112 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="stylesheet" type="text/css" href="/print.css" media="print">
+    </head>
+    <body>
+        <header>
+            <h1>Soorsi Poscht</h1>
+            <em>Die Zeitschrift der SP Sursee und Umgebung</em>
+        </header>
+        <main id="main">
+            <div class="content">
+                {% for post in site.posts limit:8 %}
+                    {% if post.link %}
+                    {% else  %}
+                    <div class="post">
+                        <!--
+                        {% if post.image %}
+                        <div class="background" style="background-image: url('{{ post.image }}');"></div>
+                        {% endif %}
+                        -->
+                        <p class="date">
+                            {{ post.date | date: "%-d" }}.
+                            {% assign m = post.date | date: "%-m" %}
+                            {% case m %}
+                            {% when "1" %}Jan.
+                            {% when "2" %}Febr.
+                            {% when "3" %}März
+                            {% when "4" %}April
+                            {% when "5" %}Mai
+                            {% when "6" %}Juni
+                            {% when "7" %}Juli
+                            {% when "8" %}Aug.
+                            {% when "9" %}Sept.
+                            {% when "10" %}Okt.
+                            {% when "11" %}Nov.
+                            {% when "12" %}Dez.
+                            {% endcase %}
+                            {{ post.date | date: "%y" }}</p>
+                        <h2 class="title">{{ post.title }}</h2>
+                        <p class="description">{{ post.description }}</p>
+                        {% if post.link %}
+                        <a href="{{ post.link }}" class="button">Mehr lesen</a>
+                        {% else %}
+                        <a href="{{ post.url }}" class="button">Mehr lesen</a>
+                        {% endif %}
+                        <div class="content">
+                            {{ post.content }}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </main>
+        <footer>
+            Für mehr Informationen besuchen Sie unsere Webseite <em>sp-sursee.ch</em>.
+        </footer>
+        <script>
+            function replaceLinks() {
+                let links = document.getElementsByTagName("a");
+                console.log(links.length);
+                for (let i = 0; i < links.length; i++) {
+                    let link = links[i];
+                    console.log(link);
+                    let href = link.getAttribute("href");
+                    href = href.trim();
+                    if (!href.startsWith("http")) {
+                        href = window.location.origin + href;
+                    }
+                    if (href.startsWith("https://")) {
+                        href = href.replace("https://", "");
+                    }
+                    if (href.startsWith("http://")) {
+                        href = href.replace("http://", "");
+                    }
+                    if (href.endsWith("/")) {
+                        href = href.slice(0, -1);
+                    }
+                    /*
+                    let qrContainer = document.createElement("div");
+                    qrContainer.classList.add("qr-container");
+                    let qrCode = document.createElement("div");
+                    qrCode.classList.add("qr-code");
+                    let qrInfo = document.createElement("div");
+                    qrInfo.classList.add("qr-info");
+    
+                    qrInfo.innerHTML = "Für weitere Infos, scannen Sie den QR-Code oder besuchen Sie <br><em>" + href + "</em>";
+    
+                    new QRCode(qrCode, {
+                        text: href,
+                        width: 1024,
+                        height: 1024
+                    });
+    
+                    qrContainer.appendChild(qrInfo);
+                    qrContainer.appendChild(qrCode);
+                    link.before(qrContainer);
+                    */
+                    link.removeAttribute("href");
+                    link.innerHTML = link.innerHTML + " <em>(" + href + ")</em>";
+                }
+            }
+
+            replaceLinks();
+        </script>
+        <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    </body>
+</html>

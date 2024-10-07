@@ -17,7 +17,7 @@ body {
     background: white;
 }
 
-#header-image, nav, footer, .background, button, a.button {
+#header-image, nav, footer, button, a.button {
     display: none;
 }
 
@@ -42,6 +42,10 @@ main {
 .post .description {
     page-break-before: avoid;
     page-break-after: avoid;
+}
+
+p {
+    page-break-inside: avoid;
 }
 
 .post + .post {
@@ -82,7 +86,7 @@ header {
     font-weight: 400;
     font-style: normal;
 }
-
+/*
 .qr-container {
     display: flex;
     flex-wrap: nowrap;
@@ -102,4 +106,16 @@ header {
 
 .qr-info {
     font-size: 12px;
+}
+*/
+
+figure {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+img {
+    width: 100%;
 }

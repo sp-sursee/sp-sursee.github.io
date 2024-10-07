@@ -1,7 +1,7 @@
 ---
 layout: initiative
 title:  "Ein neuer Bushof für Sursee"
-description: "Sursee hat am Sonntag, dem 15.5 den neuen Bushof mit wichtigen Veloparkplätzen eindeutig angenommen. Die SP Sursee dankt allen Abstimmenden für das klare Signal."
+description: "Sursee hat am Sonntag, dem 15.5. den neuen Bushof mit wichtigen Veloparkplätzen eindeutig angenommen. Die SP Sursee dankt allen Abstimmenden für das klare Signal."
 image: "/assets/images/events/bushof-sursee/bushof.jpg"
 color: "darkblue"
 ---
