@@ -16,7 +16,18 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-
+    - name: Compress Images
+      id: calibre
+      uses: calibreapp/image-actions@main
+      with:
+        githubToken: ${{ secrets.GITHUB_TOKEN }}
+        compressOnly: true
+    - name: Compress Files
+      uses: stefh/ghaction-CompressFiles@v2
+      with:
+        path: ./_site/
+        extensions: '.jpg,.png,.js,.css,.html,.wasm'
+        tools: 'brotli,gzip'
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:

@@ -32,13 +32,6 @@ email="fabian.boesiger@sp-sursee.ch"
 %}
 
 {% include portrait.html
-image="/assets/images/portraits/yvonne-zemp-baumgartner2.webp"
-name="Yvonne Zemp Baumgartner"
-role="Mitglied GL"
-email="yvonne.zemp@sp-sursee.ch"
-%}
-
-{% include portrait.html
 image="/assets/images/portraits/beni-rindlisbacher.webp"
 name="Beni Rindlisbacher"
 role="Mitglied GL"
@@ -85,9 +78,10 @@ role="Kantonsrätin"
 ### Unsere Mandate in der Stadt Sursee
 
 {% include portrait.html
-image="/assets/images/portraits/jolanda-achermann-sen.webp"
-name="Jolanda Achermann Sen"
+image="/assets/images/portraits/yvonne-zemp-baumgartner2.webp"
+name="Yvonne Zemp Baumgartner"
 role="Stadträtin"
+email="yvonne.zemp@sp-sursee.ch"
 %}
 
 {% include portrait.html
