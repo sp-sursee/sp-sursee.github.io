@@ -10,7 +10,6 @@ layout: default
 
 ### Per Post
 
-Yvonne Zemp Baumgartner<br>
-Schellenrainstrasse 4<br>
-6210 Sursee<br>
-041 921 05 29
+Fabian Bösiger<br>
+Centralstrasse 37<br>
+6210 Sursee
