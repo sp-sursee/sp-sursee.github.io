@@ -5,6 +5,8 @@ layout: default
     
 ## Termine
 
+{% include event.html title="SP Frauen Luzern" date="2025-04-11" begin="18:30" end="20:00" description="" location="Kulturhaus Fruchthof Sursee" %}
+
 {% include event.html title="SP Sursee Mitgliederversammlung" date="2025-05-12" begin="19:30" end="22:00" description="" location="Ort noch nicht bekannt" %}
 
 {% include event.html title="Ordentliche Einwohnergemeindeversammlung" date="2025-05-26" begin="19:30" end="22:00" location="Rathaus" %}
